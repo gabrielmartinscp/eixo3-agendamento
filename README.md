@@ -24,6 +24,10 @@ https://www.wampserver.com/en/download-wampserver-64bits/
 
 A instalação já inclui PHP, MySQL, o servidor Apache e o painel de administração (PHPMyAdmin).
 
+Após instalar o WAMP, além de importar o banco de dados, será necessário criar um "VirtualHost" e copiar os arquivos 
+para o diretório. O nome do VirtualHost original é "eixo3-agendamento". Se quiserem escolher um nome diferente, o nome 
+nos arquivos de configuração deverá ser alterado.
+
 
 ## Banco de dados
 
