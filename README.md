@@ -2,9 +2,13 @@
 
 ## arquivos de configuração:
 0_javascript/CRUD/config.js
+
 auth/config.php
+
 CRUD/config.php
+
 login/config.php
+
 
 Os arquivos de configuração foram incluidos no .gitignore para não obrigar o grupo inteiro a
 fazer instalações idênticas.
