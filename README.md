@@ -63,3 +63,8 @@ https://www.mysql.com/products/workbench/
 ## 3.1 - Backend
 
 ### 3.1.1 - Banco de Dados
+
+A estrutura do banco de dados pode ser observada na imagem a seguir:
+
+![BD easybook atualizado 13-09](https://github.com/gabrielmartinscp/eixo3-agendamento/assets/100474390/18ed7746-8b82-4f96-8042-f38157cb9b39)
+
