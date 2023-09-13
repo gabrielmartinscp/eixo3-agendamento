@@ -100,6 +100,7 @@ linguagem PHP, acessível no link abaixo.
 
 https://www.php.net/manual/pt_BR/pdo.prepared-statements.php
 
+### 3.1.3 - Classes
 O diagrama de classes da aplicação pode ser observada na imagem a seguir:
 
 ![EasyBook - diagrama de classes - RASCUNHO](https://github.com/gabrielmartinscp/eixo3-agendamento/assets/100474390/d5a4cfeb-ce51-401b-88a2-b212a6b1ff5f)
