@@ -62,9 +62,46 @@ https://www.mysql.com/products/workbench/
 
 ## 3.1 - Backend
 
+Pelo lado do servidor, este projeto foi desenvolvido usando a linguagem PHP e o SGBD MySQL.
+
 ### 3.1.1 - Banco de Dados
 
 A estrutura do banco de dados pode ser observada na imagem a seguir:
 
 ![BD easybook atualizado 13-09](https://github.com/gabrielmartinscp/eixo3-agendamento/assets/100474390/18ed7746-8b82-4f96-8042-f38157cb9b39)
 
+### 3.1.2 - Arquitetura
+
+Neste sistema, a função principal da aplicação server-side é gerenciar os dados relativos às tabelas apresentadas 
+no item 3.1.1 - "prestadores", "usuarios", "horarios", "atendimentos" e "avaliacoes" - através de operações CRUD.
+
+Para cada tabela, são disponibilizados quatro scripts separados, equivalentes às operações Create, Read, Update e Delete.
+
+Além disso, foram implementadas classes diretamente equivalentes a cada uma das tabelas.
+
+Essa configuração possui dois objetivos principais:
+
+1 - encapsulamento/modularidade -> a opção por implementar scripts padronizados para as operações CRUD permite encapsular 
+as consultas ao servidor em funções do Javascript, conforme será melhor detalhado no item 3.2(Frontend). Esse encapsulamento possibilita 
+que o backend seja migrado para outra linguagem de programação sem que haja a necessidade de adaptar a estrutura do frontend.
+
+Ainda no mesmo tema, ao optar por queries genéricas, foi possível implementar os scripts usando a classe nativa PDO (PHP Data Object), 
+de modo que uma eventual migração para outro SGBD baseado em SQL pode ser feita com ajustes mínimos. Os detalhes da classe PDO estão 
+disponíveis na documentação oficial da linguagem PHP, acessível no link abaixo.
+
+https://www.php.net/manual/pt_BR/book.pdo.php
+
+2 - segurança/consistência -> as classes implementadas possuem métodos privados de validação de dados. Ao receber uma requisição de tipo 
+Create ou Update, o respectivo script instancia um objeto da classe apropriada com os dados recebidos e solicita o registro no Banco de Dados
+através dos métodos get. Dessa forma é possível garantir que, antes que haja a conexão com o SGBD, os dados já foram previamente validados e/ou 
+saneados, evitando registros incorretos ou deliberadamente adulterados. Além disso, o uso de "prepared statements" através da classe PDO previne 
+de forma nativa as tentativas de SQL injection. Os detalhes sobre o uso de Prepared Statements estão disponíveis na documentação oficial da 
+linguagem PHP, acessível no link abaixo.
+
+https://www.php.net/manual/pt_BR/pdo.prepared-statements.php
+
+O diagrama de classes da aplicação pode ser observada na imagem a seguir:
+
+![EasyBook - diagrama de classes - RASCUNHO](https://github.com/gabrielmartinscp/eixo3-agendamento/assets/100474390/d5a4cfeb-ce51-401b-88a2-b212a6b1ff5f)
+
+## 3.2 - Frontend
