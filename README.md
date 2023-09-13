@@ -18,13 +18,13 @@ serão descritas de forma mais precisa na documentação.
 Tendo como referência a pasta raiz do projeto, os arquivos listados abaixo possuem configurações
  e referências que são reaproveitadas em pontos diversos dos arquivos de código.
 
-0_javascript/CRUD/config.js
+#### 0_javascript/CRUD/config.js
 
-auth/config.php
+#### auth/config.php
 
-CRUD/config.php
+#### CRUD/config.php
 
-login/config.php
+#### login/config.php
 
 
 Os arquivos de configuração foram incluidos no .gitignore para que o grupo pudesse trabalhar com instalações 
