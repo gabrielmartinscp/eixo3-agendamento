@@ -30,9 +30,9 @@ let config = {
     }
 }
 ```
-config.servidor => URL raiz da aplicação;
+config.servidor -> URL raiz da aplicação;
 
-config.diretorios.* => o endereço relativo dos diretórios que contém os scripts PHP para cada classe.
+config.diretorios.* -> o endereço relativo dos diretórios que contém os scripts PHP para cada classe.
 
 Os endereços definidos acima são acessados de forma similar por 16 funções distribuidas em 4 arquivos.
 
