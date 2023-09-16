@@ -39,7 +39,8 @@ final class Horario
         function limitar_numero_do_dia(int $numero_do_dia, int $ultimo_dia_possivel): string
         {
             $num = $numero_do_dia > $ultimo_dia_possivel ? $ultimo_dia_possivel : $numero_do_dia;
-            $str = strlen(strval($num)) == 2 ? strval($num) : '0' . strval($num);
+            $string = strval($num);
+            $str = strlen($string) == 2 ? $string : '0' . $string;
             return $str;
         }
 

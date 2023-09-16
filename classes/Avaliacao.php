@@ -32,6 +32,11 @@ final class Avaliacao
         return $t;
     }
 
+    public function getId() :int
+    {
+        return $this->id;
+    }
+    
     public function getIdAtendimento(): int
     {
         return $this->id_atendimento;
