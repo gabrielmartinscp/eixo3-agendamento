@@ -38,6 +38,12 @@ class UsuarioComum
     function getId(): int
     {
         return $this->id;
+
+    }
+
+    function getNome(): string {
+
+        return $this->nome;
     }
 }
 
