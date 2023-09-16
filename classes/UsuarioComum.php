@@ -45,6 +45,11 @@ class UsuarioComum
 
         return $this->nome;
     }
+
+    function getTipo(): string
+    {
+        return $this->tipo;
+    }
 }
 
 ?>
