@@ -149,7 +149,7 @@ Pelo lado do servidor, este projeto foi desenvolvido usando a linguagem PHP e o 
 
 A estrutura do banco de dados pode ser observada na imagem a seguir:
 
-![BD easybook atualizado 13-09](https://github.com/gabrielmartinscp/eixo3-agendamento/assets/100474390/18ed7746-8b82-4f96-8042-f38157cb9b39)
+![bd_easybook atualizado 26-09](https://github.com/gabrielmartinscp/eixo3-agendamento/assets/100474390/81ca7630-9a6d-4189-be27-e82feeec85d3)
 
 ### 3.1.2 - Arquitetura
 
