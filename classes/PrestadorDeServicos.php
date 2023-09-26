@@ -1,11 +1,10 @@
 <?php
 namespace Easybook\classes;
 
-final class PrestadorDeServicos extends UsuarioComum
+final class PrestadorDeServicos
 {
-    public function __construct(string $nome, string $foto_perfil, string $tipo, int $id/*COMPLETAR A LISTA DE ATRIBUTOS*/)
+    public function __construct()
     {
-        parent::__construct($nome, $foto_perfil, $tipo, $id);
         
     }
 
