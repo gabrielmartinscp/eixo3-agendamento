@@ -9,9 +9,12 @@ class UsuarioComum
     private string $foto_perfil;
 
 
-    public function __construct(string $nome)
+    public function __construct(string $nome, string $foto_perfil, string $tipo, int $id)
     {
         $this->nome = $this->validar_nome($nome);
+        $this->foto_perfil = $this->validar_foto_perfil($foto_perfil);
+        $this->tipo = $this->validar_tipo($tipo);
+        $this->id = $this->validar_id($id);
     }
 
     // validação 
@@ -41,14 +44,19 @@ class UsuarioComum
 
     }
 
-    function getNome(): string {
-
+    function getNome(): string
+    {
         return $this->nome;
     }
 
     function getTipo(): string
     {
         return $this->tipo;
+    }
+
+    function getFotoPerfil(): string
+    {
+        return $this->foto_perfil;
     }
 }
 
