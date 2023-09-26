@@ -9,6 +9,7 @@ $id_atendimento = $_GET['idatendimento'];
 $estrelas = $_GET['estrelas'];
 $texto = $_GET['texto'];
 
+
 $avaliacao = new Avaliacao($estrelas, $texto, $id_atendimento, $id);
 
 try
@@ -16,15 +17,11 @@ try
 
     $conexao = new PDO('mysql:host=' . $db_host . ';dbname=' . $db_nome, $db_usuario, $db_senha);
 
-    /*
-//id do usuário logado -> 37 
-$idlogado = $_SESSION['id_usuário'];
-//id do usuário associado com a avaliação -> 45 
-$consulta_id_usuario = $conexao->query('SELECT idcliente FROM avaliacoes INNER JOIN atendimentos WHERE idatendimento = idatendimentos')->fetch();
+    
+    $idlogado = $_SESSION['id_usuário'];
+    $consulta_id_usuario = $conexao->query('SELECT idcliente FROM avaliacoes INNER JOIN atendimentos WHERE idatendimento = idatendimentos')->fetch();
+    if($idlogado != $consulta_id_usuario) Throw new Exception("usuário não autorizado");
 
-//se ids diferentes 
-if($idlogado != $consulta_id_usuario) Throw new Exception("usuário não autorizado");
-*/
 
     $consulta = $conexao->prepare("UPDATE avaliacoes SET id_atendimento = ?, estrelas = ?, texto = ? WHERE idavaliacoes = ?");
 
