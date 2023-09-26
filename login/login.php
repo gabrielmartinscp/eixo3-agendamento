@@ -14,7 +14,7 @@ try {
 
     $conn = new PDO('mysql:host=' . $db_host . ';dbname=' . $db_nome, $db_usuario, $db_senha);
 
-    $consulta = $conn->query("SELECT senha, idusuarios FROM " . $db_tabela_dados_login_senha . " WHERE login = .'" . $login . "'")->fetchAll();
+    $consulta = $conn->query("SELECT senha, idusuarios FROM " . $db_tabela_dados_login_senha . " WHERE login = .'" . $login . "'")->fetch();
 
     if(!is_array($consulta))
     {
@@ -22,9 +22,9 @@ try {
         exit();
     }
 
-    $hash = $consulta[0]['senha'];
+    $hash = $consulta['senha'];
 
-    $id = $consulta[0]['idusuarios'];
+    $id = $consulta['idusuarios'];
 
     $login_verificado = password_verify($senha, $hash);
 
