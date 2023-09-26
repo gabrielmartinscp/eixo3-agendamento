@@ -76,6 +76,32 @@ INSERT INTO `avaliacoes` VALUES (0,4,'5','teste abc',0);
 UNLOCK TABLES;
 
 --
+-- Table structure for table `dados_acesso`
+--
+
+DROP TABLE IF EXISTS `dados_acesso`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `dados_acesso` (
+  `login` varchar(50) NOT NULL,
+  `senha` varchar(100) NOT NULL,
+  `id_usuario` int NOT NULL AUTO_INCREMENT,
+  PRIMARY KEY (`login`),
+  KEY `id_usuario_idx` (`id_usuario`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `dados_acesso`
+--
+
+LOCK TABLES `dados_acesso` WRITE;
+/*!40000 ALTER TABLE `dados_acesso` DISABLE KEYS */;
+INSERT INTO `dados_acesso` VALUES ('login','$2y$10$VizvBXfO44QIDKAjNmMXBeetwukJESXREIKeBfs6tYA.MJ4wFYi8a',1);
+/*!40000 ALTER TABLE `dados_acesso` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `horarios`
 --
 
@@ -151,13 +177,12 @@ DROP TABLE IF EXISTS `usuarios`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `usuarios` (
   `idusuarios` int NOT NULL AUTO_INCREMENT,
-  `login` varchar(50) DEFAULT NULL,
-  `password` varchar(100) DEFAULT NULL,
   `nome` varchar(50) DEFAULT NULL,
   `tipo` enum('prestador','cliente') DEFAULT NULL,
   `foto_perfil` tinytext,
   `deletado` tinyint NOT NULL DEFAULT '0',
-  PRIMARY KEY (`idusuarios`)
+  PRIMARY KEY (`idusuarios`),
+  CONSTRAINT `id_usuario` FOREIGN KEY (`idusuarios`) REFERENCES `dados_acesso` (`id_usuario`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -167,7 +192,7 @@ CREATE TABLE `usuarios` (
 
 LOCK TABLES `usuarios` WRITE;
 /*!40000 ALTER TABLE `usuarios` DISABLE KEYS */;
-INSERT INTO `usuarios` VALUES (1,'teste','teste','teste','cliente','teste',0);
+INSERT INTO `usuarios` VALUES (1,'teste','cliente','teste',0);
 /*!40000 ALTER TABLE `usuarios` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -180,4 +205,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2023-09-09 18:43:21
+-- Dump completed on 2023-09-26 14:04:03
