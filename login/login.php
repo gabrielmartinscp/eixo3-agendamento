@@ -37,11 +37,11 @@ echo($login_verificado ? 'Login efetuado com sucesso!' : 'Senha inválida, tente
 
 if($login_verificado)
 {
-session_start();
+    session_start();
 
-$_SESSION['id_usuário'] = $id;
+    $_SESSION['id_usuário'] = $id;
 
-header($pagina_inicial_login_bem_sucedido);
+    header($pagina_inicial_login_bem_sucedido);
 }
 
 ?>
