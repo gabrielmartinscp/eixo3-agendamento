@@ -35,10 +35,13 @@ try {
 
 echo($login_verificado ? 'Login efetuado com sucesso!' : 'Senha inválida, tente novamente.');
 
+if($login_verificado)
+{
 session_start();
 
 $_SESSION['id_usuário'] = $id;
 
 header($pagina_inicial_login_bem_sucedido);
+}
 
 ?>
