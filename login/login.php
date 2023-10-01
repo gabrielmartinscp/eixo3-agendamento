@@ -33,8 +33,6 @@ try {
     exit();
 }
 
-echo($login_verificado ? 'Login efetuado com sucesso!' : 'Senha inválida, tente novamente.');
-
 if($login_verificado)
 {
     session_start();
@@ -43,5 +41,8 @@ if($login_verificado)
 
     header($pagina_inicial_login_bem_sucedido);
 }
-
+else
+{
+    echo('Senha inválida, tente novamente.');
+}
 ?>
