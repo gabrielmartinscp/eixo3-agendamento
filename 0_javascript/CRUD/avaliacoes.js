@@ -61,7 +61,7 @@ async function deletar_avaliacao(id_avaliacoes)
     {
         resposta = res;
     }
-    let query = `${config.servidor}/${config.diretorios.avaliacoes}/atualizar.php?idavaliacoes=${id_avaliacoes}`;
+    let query = `${config.servidor}/${config.diretorios.avaliacoes}/deletar.php?idavaliacoes=${id_avaliacoes}`;
     
     reqHTTP(query, callback);
     return JSON.parse(resposta);
