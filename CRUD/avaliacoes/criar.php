@@ -15,6 +15,7 @@ try
     $conexao = new PDO('mysql:host=' . $db_host . ';dbname=' . $db_nome, $db_usuario, $db_senha);
 
     $idlogado = $_SESSION['id_usuário'];
+    
     $consulta_id_usuario = $conexao->query('SELECT idcliente FROM avaliacoes WHERE idatendimento = ' . $id_atendimento)->fetch();
     if($idlogado != $consulta_id_usuario) Throw new Exception("usuário não autorizado");
 
