@@ -1,16 +1,25 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     height: 100%;
     width: 100%;
     background: #efefef;
+    padding: 60px 0 60px 0; /*Alterei aqui*/
+    
 }
 
 h2 {
     margin: 0 auto;
-    margin-bottom: 0px;
+    /* margin-bottom: 0px; */ /*Alterei aqui*/
     margin-bottom: 20px;
 }
 
 .container-login {
+    height: 100%; /*Alterei aqui*/
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -21,7 +30,7 @@ h2 {
     padding: 50px;
     border-radius: 3%;
     margin: 0 auto;
-    margin-top: 30%;
+    /* margin-top: 30%; */ /*Alterei aqui*/
 }
 
 .form-control {
