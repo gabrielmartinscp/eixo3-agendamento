@@ -188,3 +188,45 @@ body > .left {
     background-color: #2f1665;
     color: white !important;
 }
+
+
+.clientprofilepic
+{
+    position: relative;
+    bottom: 10px;
+    border: 0.3cm solid white;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: inline-block;
+    background-image: url('img/foto-perfil-marcela.jpeg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+.clientprofilepic p
+{
+    position: relative;
+    top: 30px;
+}
+
+.smallpic
+{
+    width: 25px;
+    height: 25px;
+    border: 0.1cm solid white;
+    border-radius: 50%;
+    display: inline-block;
+    background-image: url('img/foto-perfil-marcela.jpeg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+.smallpic p
+{
+    position: relative;
+    top: 10px;
+    right: 18px;
+}
