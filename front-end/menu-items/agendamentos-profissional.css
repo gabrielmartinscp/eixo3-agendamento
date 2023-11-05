@@ -1,0 +1,232 @@
+.main-container {
+    padding: 20px;
+}
+
+/* Menu styles */
+.menu-container {
+    list-style-type: none;
+    background-color: #05012f; /* Background color for the menu */
+    padding: 0;
+    overflow: hidden;
+}
+
+.menu-items {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.menu-items a {
+    display: block;
+    color: #fff;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.menu-items a:hover {
+    background-color: #2f1665;
+    color: white !important;
+}
+
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+    align-items: center;
+}
+.header button {
+    border: 0;
+    background: #1d1a41;
+    color: white;
+    border-radius: 10px;
+    padding: 10px 30px;
+}
+
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+th, td {
+    padding: 8px;
+    text-align: left;
+    border-radius: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #f4f3fe;
+}
+
+
+.action-buttons {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.edit-button, .delete-button {
+    padding: 5px 10px;
+    background-color: #05012f;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-right: 10px;
+    position: relative;
+    display: inline-block;
+    border-radius: 8px;
+}
+
+.edit-button:hover {
+    background: #434470;
+}
+.delete-button:hover {
+    background: #e87373;
+}
+
+button:focus {
+    background: #6960a9 !important;
+}
+
+.delete-button {
+    background-color: #f44336;
+}
+.edit-button .tooltiptext,
+.delete-button .tooltiptext {
+    visibility: hidden;
+    width: 80px;
+    background-color: #57587efa;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -60px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+input[type=time] {
+    border-radius: 7px;
+    border: 2px solid #5658d126;
+}
+
+input[type=checkbox] {
+    width: 20px;
+    height: 20px;
+    margin-right: 6px;
+}
+
+.edit-button:hover .tooltiptext,
+.delete-button:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
+
+.agendamento-modal {
+    display: none;
+}
+
+.hours-days-form {
+    max-width: 100%;
+    overflow-x: auto;
+    margin-left: 14px;
+    border: 2px solid #595d9021;
+    padding: 8px;
+    overflow-y: hidden;
+}
+
+.hours-days-form th {
+    
+}
+
+.intervalo-e-tempo {
+    margin-left: 14px;
+    margin-top: 20px;
+}
+
+.save-button {
+    margin-left: 14px;
+}
+
+.save-button, .add-button {
+    background: #1d1a41;
+    border-radius: 30px !important;
+}
+
+.save-button:hover, .add-button:hover {
+    background: #381554 !important;
+}
+
+.agendamento-modal {
+    flex-direction: column;
+    background: #fff;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    justify-content: center;
+    position: fixed;
+    top: 10%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 80%;
+    height: auto;
+    margin: 0 auto;
+    max-height: 600px;
+    padding: 20px;
+}
+
+.agendamento-modal input[type=text] {
+    background: #5f499a14 !important;
+    border-radius: 26px;
+}
+
+.agendamento-modal tr:nth-child(2n) {
+    background: white;
+}
+
+.close-btn {
+    cursor: pointer;
+}
+
+.close-btn i {
+    font-size: 1.5em;
+    color: #05012f;
+}
+
+@media (max-width: 768px) {
+    table {
+        font-size: 14px;
+    }
+
+    th, td {
+        padding: 6px;
+    }
+
+    .edit-button, .delete-button {
+        padding: 3px 8px;
+        width: 32px;
+    }
+
+    .header button {
+        border-radius: 20px;
+        padding: 10px;
+        white-space: nowrap;
+        font-size: .75em;
+    }
+    h2 {
+        font-size: 1.2em;
+    }
+
+}
+
+.back {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 50px;
+    margin-top: 0px;
+}

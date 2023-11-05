@@ -1,0 +1,54 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100%;
+    width: 100%;
+    background: #efefef;
+    padding: 60px 0 60px 0; /*Alterei aqui*/
+    
+}
+
+h2 {
+    margin: 0 auto;
+    /* margin-bottom: 0px; */ /*Alterei aqui*/
+    margin-bottom: 20px;
+}
+
+.container-login {
+    height: 100%; /*Alterei aqui*/
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    position: relative;
+    max-width: 650px;
+    padding: 50px;
+    border-radius: 3%;
+    margin: 0 auto;
+    /* margin-top: 30%; */ /*Alterei aqui*/
+}
+
+.form-control {
+    background: #5f499a14 !important;
+    border-radius: 20px !important;
+}
+
+.form-outline.mb-4 {
+    margin-bottom: 1.1rem !important;
+}
+
+.nav-pills .nav-link.active {
+    background-color: #49689a !important;
+    color: white !important;
+}
+
+.btn-primary {
+    background-color: #49689a !important;
+    border-color: #49689a !important;
+    padding: 30px;
+}

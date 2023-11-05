@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visão do Cliente</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700" />
+    <link rel="stylesheet" type="text/css" href="overview.css">
+</head>
+<body>
+    <ul class="menu-container">
+        <li class="menu-items">
+            <a href="#">EasyBook</a>
+            <a href="#">Nome do Cliente</a>
+        </li>
+    </ul>
+    
+    <div class="profile">
+        <div class="left">
+            <div class="profile-info">
+                <div class="left">
+                    <img src="/eixo3-agendamento/front-end/img/profile.jpg" alt="profile">
+                </div>  
+                <div class="right">
+                    <h3>Juliana Alves</h3>
+
+                    <img src="/eixo3-agendamento/front-end/img/star.jpg" alt="star">
+                    <img src="/eixo3-agendamento/front-end/img/star.jpg" alt="star">
+                    <img src="/eixo3-agendamento/front-end/img/star.jpg" alt="star">
+                    <img src="/eixo3-agendamento/front-end/img/star.jpg" alt="star">
+                    <img src="/eixo3-agendamento/front-end/img/star.jpg" alt="star">
+                </div>  
+            </div>
+            <div class="profile-more-info">
+                <div class="grouped-info">
+                    <p>Cabeleleira</p>
+                    <span>Serviços: corte / tintura / permanente</span>
+                </div>
+                <div class="grouped-info">
+                    <p>Localização</p>
+                    <span>Rua Conselheiro Furtado, 150 - Liberdade, São Paulo</span>
+                </div>
+                <div class="grouped-info">
+                    <p>Tabela de preços</p>
+                    <span class="ver-preco">Ver preços</span>
+                </div>
+                <div class="grouped-info">
+                    <p>Contato</p>
+                    <span>(011) 9887-5565</span>
+                </div>
+
+                <a href="#">Conversar pelo Whatsapp</a>
+
+                
+
+            </div>
+        </div>
+        <div class="right">
+            <div class="schedule-container">
+                <div class="navigation">
+                <button id="prevWeek">&lt;</button>
+                </div>
+                <div class="schedule">
+                <div class="day">
+                    <h3>Seg</h3>
+                    <span>01/jul</span>
+                    <p>09:00</p>
+                    <p>11:00</p>
+                    <p>14:00</p>
+                    <p class="inactive">&nbsp</p>
+                    <p class="inactive">&nbsp</p>
+                </div>
+                <div class="day">
+                    <h3>Ter</h3>
+                    <span>02/jul</span>
+                    <p>09:00</p>
+                    <p>11:00</p>
+                    <p>14:00</p>
+                    <p>16:00</p>
+                    <p>18:00</p>
+                </div>
+                <div class="day">
+                    <h3>Quar</h3>
+                    <span>03/jul</span>
+                    <p>09:00</p>
+                    <p>11:00</p>
+                    <p>14:00</p>
+                    <p>16:00</p>
+                    <p>18:00</p>
+                </div>
+                <div class="day">
+                    <h3>Qui</h3>
+                    <span>04/jul</span>
+                    <p>09:00</p>
+                    <p>11:00</p>
+                    <p>14:00</p>
+                    <p>16:00</p>
+                    <p>18:00</p>
+                </div>
+                <div class="day">
+                    <h3>Sex</h3>
+                    <span>05/jul</span>
+                    <p>09:00</p>
+                    <p>11:00</p>
+                    <p>14:00</p>
+                    <p>16:00</p>
+                    <p>18:00</p>
+                </div>
+                <div class="day">
+                    <h3>Sáb</h3>
+                    <span>06/jul</span>
+                    <p>09:00</p>
+                    <p>11:00</p>
+                    <p>14:00</p>
+                    <p>16:00</p>
+                    <p>18:00</p>
+                </div>
+                </div>
+                <div class="navigation">
+                <button id="nextWeek">&gt;</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="comments">
+        <h2>Comentários</h2>
+
+        <!-- Display existing comments -->
+        <div id="comments">
+            <div class="comment">
+                <strong>Patrícia:</strong> Ótimo atendimento, recomendo!
+            </div>
+            <div class="comment">
+                <strong>Angélica:</strong> Perfeita, irei cortar mais vezes com ela com toda certeza.
+            </div>
+        </div>
+        
+        <!-- Add a new comment -->
+        <h3>Faça um comentário:</h3>
+        <form id="commentForm">
+            <label for="username">Usuário:</label>
+            <input type="text" id="username" name="username" required><br><br>
+        
+            <label for="commentText">Comentário:</label>
+            <textarea id="commentText" name="commentText" rows="4" cols="50" required></textarea><br><br>
+        
+            <button type="button" id="submitComment">Enviar comentário</button>
+        </form>
+    </div>
+
+    <script>
+    const schedule = document.querySelector('.schedule');
+    const prevWeekButton = document.getElementById('prevWeek');
+    const nextWeekButton = document.getElementById('nextWeek');
+    let currentWeek = 0;
+    const numVisibleDays = 4; // Number of days to show at once
+
+    function updateSchedule(week) {
+        const days = document.querySelectorAll('.day');
+        days.forEach((day, index) => {
+            if (index >= week && index < week + numVisibleDays) {
+                day.style.display = 'block';
+            } else {
+                day.style.display = 'none';
+            }
+        });
+    }
+
+    prevWeekButton.addEventListener('click', () => {
+        if (currentWeek > 0) {
+            currentWeek--;
+            updateSchedule(currentWeek);
+        }
+    });
+
+    nextWeekButton.addEventListener('click', () => {
+        if (currentWeek + numVisibleDays < document.querySelectorAll('.day').length) {
+            currentWeek++;
+            updateSchedule(currentWeek);
+        }
+    });
+
+    updateSchedule(currentWeek);
+    </script>
+
+</body>
+</html>

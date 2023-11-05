@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>User Profile Editing</title>
+    <link rel="stylesheet" type="text/css" href="editar-conta.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EasyBook</title>
+    <!-- Font Awesome (icones) -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet"  />
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet"  />
+    <!-- MDB -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.2/mdb.min.css"  rel="stylesheet"  />
+    <!-- MDB -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.2/mdb.min.js"></script>
+
+    <!-- jQuery imported via CDN -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+    <ul class="menu-container">
+        <li class="menu-items">
+            <a href="#">EasyBook</a>
+            <a href="#">Nome do Cliente</a>
+        </li>
+    </ul>
+
+    <div class="container">
+        <h2>Edite seu perfil</h2>
+        <form id="profileForm">
+            <div class="group">
+                <label for="firstName">Primeiro nome:</label>
+                <input type="text" id="firstName" name="firstName">
+            </div>
+
+            <div class="group">
+                <label for="lastName">Último nome:</label>
+                <input type="text" id="lastName" name="lastName">
+            </div>
+
+            <div class="group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email">
+            </div>
+
+            <div class="group">
+                <label for="bio">Descrição:</label>
+                <textarea id="bio" name="bio" rows="4" cols="50"></textarea>
+            </div>
+
+            <button type="button" id="saveButton">Salvar</button>
+        </form>
+
+        <div id="profileMessage"></div>
+    </div>
+
+    <script>
+        $(document).ready(function () {
+            $('#saveButton').click(function () {
+                var firstName = $('#firstName').val();
+                var lastName = $('#lastName').val();
+                var email = $('#email').val();
+                var bio = $('#bio').val();
+
+                var profileMessage = "Perfil atualizado!";
+                $('#profileMessage').text(profileMessage);
+            });
+        });
+    </script>
+</body>
+
+</html>
