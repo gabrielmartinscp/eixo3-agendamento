@@ -141,9 +141,6 @@ input[type=checkbox] {
     overflow-y: hidden;
 }
 
-.hours-days-form th {
-    
-}
 
 .intervalo-e-tempo {
     margin-left: 14px;
@@ -230,4 +227,90 @@ input[type=checkbox] {
     justify-content: flex-end;
     margin-right: 30px;
     margin-top: 40px;
+}
+
+
+
+
+
+
+
+.profile {
+    display: flex;
+    padding: 50px;
+}
+
+.profile .right {
+    padding-left: 70px;
+}
+.navigation button {
+    border: 0;
+    padding: 10px 12px;
+    border-radius: 60px;
+    font-size: .7em;
+    font-weight: bold;
+}
+
+.day h3 {
+    margin-top: 0;
+    margin-bottom: 3px;
+}
+
+.day span {
+    font-size: .9em;
+}
+
+.day p {
+    background: #59b8eb;
+    padding: 10px;
+    border-radius: 14px;
+    color: #0b5f8b;
+    cursor: pointer;
+}
+
+.day p.inactive {
+    background: #dedede;
+    cursor: not-allowed;
+}
+
+.schedule {
+    display: flex;
+    width: 80%;
+    max-width: 400px;
+}
+
+.day {
+    padding: 10px;
+    text-align: center;
+    width: 20%;
+    display: inline-block;
+}
+
+.navigation {
+    display: flex;
+    flex: 0 0 10%;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-top: 20px;
+}
+
+#prevWeek {
+    margin-right: -60%;
+}
+
+.schedule-container {
+    display: none;
+    width: 100%;
+    max-width: 600px;
+    overflow: hidden;
+    justify-content: space-between;
+}
+
+.right {
+    margin-left: 10px;
+}
+
+.right h3 {
+    color: #019ae9;
+    font-family: Lato;
 }

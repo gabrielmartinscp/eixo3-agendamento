@@ -40,10 +40,10 @@
             </tr>
             <tr>
                 <td>Barbearia do José </td>
-                <td>25/10/2023</td>
-                <td>10:00</td>
+                <td id="dia_01">20/11/2023</td>
+                <td id="hora_01">10:00</td>
                 <td class="action-buttons">
-                    <button class="edit-button">
+                    <button class="edit-button" id="agendamento_01">
                         <i class="fa-solid fa-pen"></i>
                         <span class="tooltiptext">Editar</span>
                     </button>
@@ -55,40 +55,10 @@
             </tr>
             <tr>
                 <td>Maria Cabeleleira</td>
-                <td>05/11/2023</td>
-                <td>14:30</td>
+                <td id="dia_02">20/11/2023</td>
+                <td id="hora_02">14:30</td>
                 <td class="action-buttons">
-                    <button class="edit-button">
-                        <i class="fa-solid fa-pen"></i>
-                        <span class="tooltiptext">Editar</span>
-                    </button>
-                    <button class="delete-button">
-                        <i class="fa-solid fa-trash"></i>
-                        <span class="tooltiptext">Deletar</span>
-                    </button>
-                </td>
-            </tr>
-            <tr>
-                <td>Barbearia do José </td>
-                <td>25/10/2023</td>
-                <td>10:00</td>
-                <td class="action-buttons">
-                    <button class="edit-button">
-                        <i class="fa-solid fa-pen"></i>
-                        <span class="tooltiptext">Editar</span>
-                    </button>
-                    <button class="delete-button">
-                        <i class="fa-solid fa-trash"></i>
-                        <span class="tooltiptext">Deletar</span>
-                    </button>
-                </td>
-            </tr>
-            <tr>
-                <td>Maria Cabeleleira</td>
-                <td>05/11/2023</td>
-                <td>14:30</td>
-                <td class="action-buttons">
-                    <button class="edit-button">
+                    <button class="edit-button" id="agendamento_02">
                         <i class="fa-solid fa-pen"></i>
                         <span class="tooltiptext">Editar</span>
                     </button>
@@ -100,8 +70,70 @@
             </tr>
         </table>
 
-        <a href="/eixo3-agendamento/front-end/perfil-cliente.html" class="back">Voltar ao Menu</a>
+        <div class="right">
+            <div class="schedule-container" id="schedule-container">
+                <div class="schedule">
+                <div class="day">
+                    <h3>Seg</h3>
+                    <span>20/nov</span>
+                    <p class="inactive">&nbsp</p>
+                    <p class="inactive">&nbsp</p>
+                    <p class="inactive">&nbsp</p>
+                    <p class="inactive">&nbsp</p>
+                    <p class="inactive">&nbsp</p>
+                </div>
+                <div class="day">
+                    <h3>Ter</h3>
+                    <span>21/nov</span>
+                    <p id="p_01" onclick="alterar_horario('21/11/2023', '09:00', 'p_01')">09:00</p>
+                    <p id="p_02" onclick="alterar_horario('21/11/2023', '11:00', 'p_02')">11:00</p>
+                    <p id="p_03" onclick="alterar_horario('21/11/2023', '14:00', 'p_03')">14:00</p>
+                    <p id="p_04" onclick="alterar_horario('21/11/2023', '16:00', 'p_04')">16:00</p>
+                    <p id="p_05" onclick="alterar_horario('21/11/2023', '18:00', 'p_05')">18:00</p>
+                </div>
+                <div class="day">
+                    <h3>Quar</h3>
+                    <span>22/nov</span>
+                    <p id="p_11" onclick="alterar_horario('22/11/2023', '09:00', 'p_11')">09:00</p>
+                    <p id="p_12" onclick="alterar_horario('22/11/2023', '11:00', 'p_12')">11:00</p>
+                    <p id="p_13" onclick="alterar_horario('22/11/2023', '14:00', 'p_13')">14:00</p>
+                    <p id="p_14" onclick="alterar_horario('22/11/2023', '16:00', 'p_14')">16:00</p>
+                    <p id="p_15" onclick="alterar_horario('22/11/2023', '18:00', 'p_15')">18:00</p>
+                </div>
+                <div class="day">
+                    <h3>Qui</h3>
+                    <span>23/nov</span>
+                    <p id="p_21" onclick="alterar_horario('23/11/2023', '09:00', 'p_21')">09:00</p>
+                    <p id="p_22" onclick="alterar_horario('23/11/2023', '11:00', 'p_22')">11:00</p>
+                    <p id="p_23" onclick="alterar_horario('23/11/2023', '14:00', 'p_23')">14:00</p>
+                    <p id="p_24" onclick="alterar_horario('23/11/2023', '16:00', 'p_24')">16:00</p>
+                    <p id="p_25" onclick="alterar_horario('23/11/2023', '18:00', 'p_25')">18:00</p>
+                </div>
+                <div class="day">
+                    <h3>Sex</h3>
+                    <span>24/nov</span>
+                    <p id="p_31" onclick="alterar_horario('24/11/2023', '09:00', 'p_31')">09:00</p>
+                    <p id="p_32" onclick="alterar_horario('24/11/2023', '11:00', 'p_32')">11:00</p>
+                    <p id="p_33" onclick="alterar_horario('24/11/2023', '14:00', 'p_33')">14:00</p>
+                    <p id="p_34" onclick="alterar_horario('24/11/2023', '16:00', 'p_34')">16:00</p>
+                    <p id="p_35" onclick="alterar_horario('24/11/2023', '18:00', 'p_35')">18:00</p>
+                </div>
+                <div class="day">
+                    <h3>Sáb</h3>
+                    <span>25/nov</span>
+                    <p id="p_41" onclick="alterar_horario('25/11/2023', '09:00', 'p_41')">09:00</p>
+                    <p id="p_42" onclick="alterar_horario('25/11/2023', '11:00', 'p_42')">11:00</p>
+                    <p id="p_43" onclick="alterar_horario('25/11/2023', '14:00', 'p_43')">14:00</p>
+                    <p id="p_44" onclick="alterar_horario('25/11/2023', '16:00', 'p_44')">16:00</p>
+                    <p id="p_45" onclick="alterar_horario('25/11/2023', '18:00', 'p_45')">18:00</p>
+                </div>
+                </div>
+            </div>
+        </div>
+
+
     </div>
+    <script type="text/javascript" src="alterar-agendamento.js"></script>
 
 </body>
 </html>
