@@ -1,34 +1,48 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <link rel="stylesheet" type="text/css" href="agendamentos-profissional.css">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="agendamentos-profissional.css"
+    />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>EasyBook</title>
     <!-- Font Awesome (icones) -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet"  />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      rel="stylesheet"
+    />
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet"  />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+      rel="stylesheet"
+    />
     <!-- MDB -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.2/mdb.min.css"  rel="stylesheet"  />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.2/mdb.min.css"
+      rel="stylesheet"
+    />
     <!-- MDB -->
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.2/mdb.min.js"></script>
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.2/mdb.min.js"
+    ></script>
 
     <!-- jQuery imported via CDN -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-</head>
-<body>
-
+  </head>
+  <body>
+    <!--AGENDAMENTO-->
     <ul class="menu-container">
-        <li class="menu-items">
-            <a href="./../index.html">EasyBook</a>
-            <a href="#">Usuário</a>
-        </li>
+      <li class="menu-items">
+        <a href="./../index.html">EasyBook</a>
+        <a href="#">Usuário</a>
+      </li>
     </ul>
 
-
-
-    <div class="main-container">
+    <!-- <div class="main-container">
         <div class="header">
             <h2>Meus Agendamentos</h2>
             <button class="add-button btn btn-primary">Adicionar agendamento</button>
@@ -102,123 +116,121 @@
                 </td>
             </tr>
         </table>
-    </div>
+    </div> -->
 
-
+    
     <div class="agendamento-modal">
-        <div class="header">
-            <h3>Edição de Agendamento</h3>
-            <div class="close-btn">
+      <div class="header">
+        <h3>Edição de Agendamento</h3>
+        <!-- <div class="close-btn">
                 <i class="fa-solid fa-xmark"></i>
-            </div>
-        </div>
+            </div> -->
+      </div>
 
-        <!-- Nome input -->
-        <div class="form-outline mb-4">
+      <!-- Nome input -->
+      <!-- <div class="form-outline mb-4">
             <input type="text" id="name" class="form-control" />
             <label class="form-label" for="name">Nome</label>
-        </div>
-        <!-- Profissional input -->
-        <div class="form-outline mb-4">
+        </div> -->
+      <!-- Profissional input -->
+      <!-- <div class="form-outline mb-4">
             <input type="text" id="profissional" class="form-control" />
             <label class="form-label" for="name">Profissional</label>
-        </div>
-        <!-- Dias e horários de trabalho -->
-        <div class="hours-days-form">
-            <p>Dias e horários de trabalho</p>
-        
-            <table>
-                <thead>
-                    <tr>
-                        <th></th>
-                        <th><input type="checkbox" name="segunda"> Seg</th>
-                        <th><input type="checkbox" name="terca"> Ter</th>
-                        <th><input type="checkbox" name="quarta"> Qua</th>
-                        <th><input type="checkbox" name="quinta"> Qui</th>
-                        <th><input type="checkbox" name="sexta"> Sex</th>
-                        <th><input type="checkbox" name="sabado"> Sáb</th>
-                        <th><input type="checkbox" name="domingo"> Dom</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Início</td>
-                        <td>
-                            <input type="time" value="06:00">
-                        </td>
-                        <td>
-                            <input type="time" value="06:00">
-                        </td>
-                        <td>
-                            <input type="time" value="06:00">
-                        </td>
-                        <td>
-                            <input type="time" value="06:00">
-                        </td>
-                        <td>
-                            <input type="time" value="06:00">
-                        </td>
-                        <td>
-                            <input type="time" value="06:00">
-                        </td>
-                        <td>
-                            <input type="time" value="06:00">
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Fim</td>
-                        <td>
-                            <input type="time" value="21:00">
-                        </td>
-                        <td>
-                            <input type="time" value="21:00">
-                        </td>
-                        <td>
-                            <input type="time" value="21:00">
-                        </td>
-                        <td>
-                            <input type="time" value="21:00">
-                        </td>
-                        <td>
-                            <input type="time" value="21:00">
-                        </td>
-                        <td>
-                            <input type="time" value="21:00">
-                        </td>
-                        <td>
-                            <input type="time" value="21:00">
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
+        </div> -->
+      <!-- Dias e horários de trabalho -->
+      <div class="hours-days-form">
+        <p>Dias e horários de trabalho</p>
 
-        <div class="intervalo-e-tempo">
-            <table>
-                <tr>
-                    <th>Intervalo de Almoço</th>
-                    <th>Tempo Padrão de Agendamento</th>
-                </tr>
-                <tr>
-                    <td>
-                        <input type="time" value="00:00"> às <input type="time" value="00:00">
-                    </td>
-                    <td>
-                        <input type="time" value="00:00">
-                    </td>
-                </tr>
-            </table>
-        </div>
+        <table>
+          <thead>
+            <tr>
+              <th></th>
+              <th><input type="checkbox" name="segunda" /> Seg</th>
+              <th><input type="checkbox" name="terca" /> Ter</th>
+              <th><input type="checkbox" name="quarta" /> Qua</th>
+              <th><input type="checkbox" name="quinta" /> Qui</th>
+              <th><input type="checkbox" name="sexta" /> Sex</th>
+              <th><input type="checkbox" name="sabado" /> Sáb</th>
+              <th><input type="checkbox" name="domingo" /> Dom</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Início</td>
+              <td>
+                <input type="time" value="06:00" />
+              </td>
+              <td>
+                <input type="time" value="06:00" />
+              </td>
+              <td>
+                <input type="time" value="06:00" />
+              </td>
+              <td>
+                <input type="time" value="06:00" />
+              </td>
+              <td>
+                <input type="time" value="06:00" />
+              </td>
+              <td>
+                <input type="time" value="06:00" />
+              </td>
+              <td>
+                <input type="time" value="06:00" />
+              </td>
+            </tr>
+            <tr>
+              <td>Fim</td>
+              <td>
+                <input type="time" value="21:00" />
+              </td>
+              <td>
+                <input type="time" value="21:00" />
+              </td>
+              <td>
+                <input type="time" value="21:00" />
+              </td>
+              <td>
+                <input type="time" value="21:00" />
+              </td>
+              <td>
+                <input type="time" value="21:00" />
+              </td>
+              <td>
+                <input type="time" value="21:00" />
+              </td>
+              <td>
+                <input type="time" value="21:00" />
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
 
-        <button class="save-button btn btn-primary">Salvar</button>
+      <div class="intervalo-e-tempo">
+        <table>
+          <tr>
+            <th>Intervalo de Almoço</th>
+            <th>Tempo Padrão de Agendamento</th>
+          </tr>
+          <tr>
+            <td>
+              <input type="time" value="00:00" /> às
+              <input type="time" value="00:00" />
+            </td>
+            <td>
+              <input type="time" value="00:00" />
+            </td>
+          </tr>
+        </table>
+      </div>
 
+      <button id="save" class="save-button btn btn-primary">Salvar</button>
     </div>
 
-    <a href="/eixo3-agendamento/front-end/perfil-profissional.html" class="back">Voltar ao Menu</a>
+    <a href="../perfil-profissional.html" class="back">Voltar ao Menu</a>
 
-
-
-    <script>
+    <!-- <script>
         $(document).ready(function() {
             $(".add-button").click(function() {  // abre modal agendamento
                 $(".agendamento-modal").css("display", "flex");
@@ -227,7 +239,17 @@
                 $(".agendamento-modal").css("display", "none");
             })
         });
-    </script>
+    </script> -->
 
-</body>
+    <script>
+      const save = document.getElementById('save')
+
+      save.addEventListener('click', () => {
+        const ok = confirm('Você confirma as informações inseridas?')
+        if (ok === true) {
+          alert('Agenda criada com sucesso!')
+        }
+      })
+    </script>
+  </body>
 </html>
