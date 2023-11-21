@@ -23,7 +23,7 @@
                 <span class="smallpic"><p>Marcela</p></span></a>
         </li>
     </ul>
-    <table class="mid">
+    <table class="mid" hidden>
         <tr>          
             <td id="dia_01"></td>
             <td id= "hora_01"></td>
@@ -78,62 +78,60 @@
         <div class="right" id="agendamento_01" >
             <div class="schedule-container" id="schedule-container">
                 <div class="schedule">
-                <div class="day">
-                    <h3>Seg</h3>
-                    <span>20/nov</span>
-                    <p class="inactive">&nbsp</p>
-                    <p class="inactive">&nbsp</p>
-                    <p class="inactive">&nbsp</p>
-                    <p class="inactive">&nbsp</p>
-                    <p class="inactive">&nbsp</p>
-                </div>
-                <div class="day">
-                    <h3>Ter</h3>
-                    <span>21/nov</span>
-                    <p id="p_02" onclick="alterar_horario('', '', 'p_02')">9:00</p>
-                    <p id="p_03" onclick="alterar_horario('', '', 'p_03')">11:00</p>
-                    <p id="p_04" onclick="alterar_horario('', '', 'p_04')">14:00</p>
-                    <p id="p_05" onclick="alterar_horario('', '', 'p_05')">16:00</p>
-                    <p id="p_06" onclick="alterar_horario('', '', 'p_06')">18:00</p>
-                </div>
-                <div class="day">
-                    <h3>Quar</h3>
-                    <span>22/nov</span>
-                    <p id="p_11" onclick="alterar_horario('', '', 'p_11')">9:00</p>
-                    <p id="p_12" onclick="alterar_horario('', '', 'p_12')">11:00</p>
-                    <p id="p_13" onclick="alterar_horario('', '', 'p_13')">14:00</p>
-                    <p id="p_14" onclick="alterar_horario('', '', 'p_14')">16:00</p>
-                    <p id="p_15" onclick="alterar_horario('', '', 'p_15')">18:00</p>
-                   
-                </div>
-                <div class="day">
-                    <h3>Qui</h3>
-                    <span>23/nov</span>
-                    <p id="p_21" onclick="alterar_horario('', '', 'p_21')">9:00</p>
-                    <p id="p_22" onclick="alterar_horario('', '', 'p_22')">11:00</p>
-                    <p id="p_23" onclick="alterar_horario('', '', 'p_23')">14:00</p>
-                    <p id="p_24" onclick="alterar_horario('', '', 'p_24')">16:00</p>
-                    <p id="p_25" onclick="alterar_horario('', '', 'p_25')">18:00</p>
-
-                </div>
-                <div class="day">
-                    <h3>Sex</h3>
-                    <span>24/nov</span>
-                    <p id="p_31" onclick="alterar_horario('', '', 'p_31')">9:00</p>
-                    <p id="p_32" onclick="alterar_horario('', '', 'p_32')">11:00</p>
-                    <p id="p_33" onclick="alterar_horario('', '', 'p_33')">14:00</p>
-                    <p id="p_34" onclick="alterar_horario('', '', 'p_34')">16:00</p>
-                    <p id="p_35" onclick="alterar_horario('', '', 'p_35')">18:00</p>
-                </div>
-                <div class="day">
-                    <h3>Sáb</h3>
-                    <span>25/nov</span>
-                    <p id="p_41" onclick="alterar_horario('', '', 'p_41')">9:00</p>
-                    <p id="p_42" onclick="alterar_horario('', '', 'p_42')">11:00</p>
-                    <p id="p_43" onclick="alterar_horario('', '', 'p_43')">14:00</p>
-                    <p id="p_44" onclick="alterar_horario('', '', 'p_44')">16:00</p>
-                    <p id="p_45" onclick="alterar_horario('', '', 'p_45')">18:00</p>
-                </div>
+                    <div class="day">
+                        <h3>Seg</h3>
+                        <span>20/nov</span>
+                        <p class="inactive">&nbsp</p>
+                        <p class="inactive">&nbsp</p>
+                        <p class="inactive">&nbsp</p>
+                        <p class="inactive">&nbsp</p>
+                        <p class="inactive">&nbsp</p>
+                    </div>
+                    <div class="day">
+                        <h3>Ter</h3>
+                        <span>21/nov</span>
+                        <p id="p_01" onclick="alterar_horario('21/11/2023', '09:00', 'p_01')">09:00</p>
+                        <p id="p_02" onclick="alterar_horario('21/11/2023', '11:00', 'p_02')">11:00</p>
+                        <p id="p_03" onclick="alterar_horario('21/11/2023', '14:00', 'p_03')">14:00</p>
+                        <p id="p_04" onclick="alterar_horario('21/11/2023', '16:00', 'p_04')">16:00</p>
+                        <p id="p_05" onclick="alterar_horario('21/11/2023', '18:00', 'p_05')">18:00</p>
+                    </div>
+                    <div class="day">
+                        <h3>Quar</h3>
+                        <span>22/nov</span>
+                        <p id="p_11" onclick="alterar_horario('22/11/2023', '09:00', 'p_11')">09:00</p>
+                        <p id="p_12" onclick="alterar_horario('22/11/2023', '11:00', 'p_12')">11:00</p>
+                        <p id="p_13" onclick="alterar_horario('22/11/2023', '14:00', 'p_13')">14:00</p>
+                        <p id="p_14" onclick="alterar_horario('22/11/2023', '16:00', 'p_14')">16:00</p>
+                        <p id="p_15" onclick="alterar_horario('22/11/2023', '18:00', 'p_15')">18:00</p>
+                    </div>
+                    <div class="day">
+                        <h3>Qui</h3>
+                        <span>23/nov</span>
+                        <p id="p_21" onclick="alterar_horario('23/11/2023', '09:00', 'p_21')">09:00</p>
+                        <p id="p_22" onclick="alterar_horario('23/11/2023', '11:00', 'p_22')">11:00</p>
+                        <p id="p_23" onclick="alterar_horario('23/11/2023', '14:00', 'p_23')">14:00</p>
+                        <p id="p_24" onclick="alterar_horario('23/11/2023', '16:00', 'p_24')">16:00</p>
+                        <p id="p_25" onclick="alterar_horario('23/11/2023', '18:00', 'p_25')">18:00</p>
+                    </div>
+                    <div class="day">
+                        <h3>Sex</h3>
+                        <span>24/nov</span>
+                        <p id="p_31" onclick="alterar_horario('24/11/2023', '09:00', 'p_31')">09:00</p>
+                        <p id="p_32" onclick="alterar_horario('24/11/2023', '11:00', 'p_32')">11:00</p>
+                        <p id="p_33" onclick="alterar_horario('24/11/2023', '14:00', 'p_33')">14:00</p>
+                        <p id="p_34" onclick="alterar_horario('24/11/2023', '16:00', 'p_34')">16:00</p>
+                        <p id="p_35" onclick="alterar_horario('24/11/2023', '18:00', 'p_35')">18:00</p>
+                    </div>
+                    <div class="day">
+                        <h3>Sáb</h3>
+                        <span>25/nov</span>
+                        <p id="p_41" onclick="alterar_horario('25/11/2023', '09:00', 'p_41')">09:00</p>
+                        <p id="p_42" onclick="alterar_horario('25/11/2023', '11:00', 'p_42')">11:00</p>
+                        <p id="p_43" onclick="alterar_horario('25/11/2023', '14:00', 'p_43')">14:00</p>
+                        <p id="p_44" onclick="alterar_horario('25/11/2023', '16:00', 'p_44')">16:00</p>
+                        <p id="p_45" onclick="alterar_horario('25/11/2023', '18:00', 'p_45')">18:00</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -148,16 +146,16 @@
         <div id="comments">
             <div class="comment">
                 <strong>Patrícia:</strong>
-                <input id = "Patricia" disabled maxlength="40" size="100">
+                <input class="caixaDeComentario" id = "Patricia" disabled maxlength="40" size="100">
             </div>
             <div class="comment">
                 <strong>Angélica:</strong> 
-                <input id = "Angelica" disabled maxlength="40" size="100">
+                <input class="caixaDeComentario" id = "Angelica" disabled maxlength="40" size="100" checkbox="">
             </div>
             <div id="myDIV">
                 <div class="comment" >
                     <strong>Marcela:</strong>
-                    <input id="segundoInput" disabled maxlength="40" size="100">
+                    <input class="caixaDeComentario" id="segundoInput" disabled maxlength="40" size="100" >
                 </div>
             </div>
 
@@ -184,7 +182,7 @@
         </form>
     </div>
 
- 
+    
     
   
 
@@ -293,7 +291,7 @@
         if(agendamento_selecionado == 1)
         {
             agendamento_atual = {
-                profissional: 'Barbearia do José',
+                profissional: 'Juliana Alves',
                 dia: document.getElementById("dia_01"),
                 hora: document.getElementById("hora_01")
             };
